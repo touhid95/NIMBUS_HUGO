@@ -1,0 +1,39 @@
+baseURL: "https://example.org/"
+languageCode: "en-us"
+title: "Thinking Machines Lab"
+enableRobotsTXT: true
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  description: "Connectionism: Research Blog by Thinking Machines Lab"
+  tagline: "Researching systems that help humans reason, build, and discover."
+  email: "hello@nimbus.research"
+  founded: "2026"
+
+menus:
+  main:
+    - name: Research
+      pageRef: /projects
+      weight: 10
+    - name: Notes
+      pageRef: /news
+      weight: 20
+    - name: About
+      pageRef: /about
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+outputs:
+  home: [html, rss]
+  section: [html, rss]
+
+minify:
+  minifyOutput: true
